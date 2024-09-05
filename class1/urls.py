@@ -17,8 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from myproject.views import index
+from myproject import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
+    # path('<int:num_page', views.num_page_view)
+    path('example', views.simple_view, name="simple-view"),
+    path('variable/', views.varialbe_view, name="variable-view"),
+
 ]
