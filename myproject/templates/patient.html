@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h2>All Patients</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Patient Age</th>
+                    <th>Patient Address</th>
+                    <th>Patient BP</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for patient in patient %}
+                <tr>
+                      <td>{{patient.name}}</td>  
+                      <td>{{patient.age}}</td>
+                      <td>{{patient.address}}</td>
+                      <td>{{patient.bp}}</td>
+
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

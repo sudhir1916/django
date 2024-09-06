@@ -25,5 +25,6 @@ urlpatterns = [
     # path('<int:num_page', views.num_page_view)
     path('example', views.simple_view, name="simple-view"),
     path('variable/', views.varialbe_view, name="variable-view"),
+    path('patient/', views.PatientView, name="Patient view")
 
 ]
