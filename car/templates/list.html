@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Car List</h2>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Brand Name</th>
+                    <th scope="col">Modal</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for car in cars %}
+                  <tr>
+                    <td>{{car.brand}}</td>
+                    <td>{{car.year}}</td>
+                    <td>
+                        <a href="{% url 'delete' car.id %}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
