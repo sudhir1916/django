@@ -19,6 +19,7 @@ from django.urls import path, include
 from myproject.views import index
 from myproject import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
@@ -27,5 +28,6 @@ urlpatterns = [
     path('variable/', views.varialbe_view, name="variable-view"),
     path('patient/', views.PatientView, name="Patient view"),
     path('cars/', include('car.urls'), name="car"),
+    path('classroom/', include('classroom.urls'), name="classroom"),
 
 ]
